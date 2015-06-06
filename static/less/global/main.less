@@ -10,10 +10,13 @@ header {
 	position: relative;
 	margin: 100px auto;
 	height: 250px;
+	
+	@media @mq-mobile, @mq-mobile-large {
+		margin: 0;
+	}
 
 	.logo_container {
 		height: 50%;
-		margin: 0 auto;
 		overflow: hidden;
 		position: relative;
 		
@@ -77,6 +80,11 @@ header {
 			}
 		}
 	}
+		
+	@media @mq-mobile, @mq-mobile-large {
+		.smallerlogo();
+		height: 75px;
+	}
 	
 	.form_container {
 		position: relative;
@@ -85,7 +93,9 @@ header {
 		overflow: hidden;
 		animation: inputsfadein 0.5s ease forwards;
 	
-		.input_container {			
+		.input_container {	
+			margin-bottom: 20px;
+			
 			input[type=text] {
 				width: 100%;
 				padding: 10px;
@@ -111,51 +121,7 @@ header {
 		margin-top: 0px;
 		margin-bottom: 0px;
 		
-		.logo_container {
-			height: 100%;
-			margin: 0;
-			
-			.logo_link_container {
-				left: 10px;
-				.clef {
-					margin-left: 12%;
-					
-					svg {
-						width: 37px;
-						height: 76px;
-						
-						.path {
-							stroke-dashoffset: 0;
-							fill-opacity: 1;
-							stroke-width: 2;
-							animation: none;
-						}
-					}
-				}
-				
-				.fermata {
-					left: 51.15%;
-					opacity: 1;
-					width: 32px;
-					animation: none;
-					
-					svg {
-						width: 32px;
-						height: 25px;
-					}
-				}
-				
-				.logo_link {
-					width: 100%;
-					opacity: 1;
-					animation: none;
-					svg {
-						width: 400px;
-						height: 76px;
-					}
-				}
-			}
-		}
+		.smallerlogo();
 		
 		.form_container {
 			top: 0px;
@@ -206,5 +172,56 @@ header {
 		to { 
 			opacity: 1;
 		} 
+	}
+	
+	.smallerlogo() {
+		.logo_container {
+			height: 100%;
+			
+			.logo_link_container {
+				left: 10px;
+				width: 400px;
+				height: 75px;
+				margin: 0 auto;
+				
+				.clef {
+					margin-left: 18%;
+					
+					svg {
+						width: 37px;
+						height: 76px;
+						
+						.path {
+							stroke-dashoffset: 0;
+							fill-opacity: 1;
+							stroke-width: 2;
+							animation: none;
+						}
+					}
+				}
+				
+				.fermata {
+					left: 76.75%;
+					opacity: 1;
+					width: 32px;
+					animation: none;
+					
+					svg {
+						width: 32px;
+						height: 25px;
+					}
+				}
+				
+				.logo_link {
+					width: 100%;
+					opacity: 1;
+					animation: none;
+					svg {
+						width: 400px;
+						height: 76px;
+					}
+				}
+			}
+		}
 	}
 }
