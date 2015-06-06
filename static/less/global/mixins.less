@@ -1,0 +1,296 @@
+/* misc mixins */
+
+.rem(@property, @value) {
+  // This is a workaround, inspired by https://github.com/borodean/less-properties
+  @px-fallback: @value * @main-font-size;
+  -: ~`(function () { return ';@{property}: @{px-fallback}'; }())`;
+  -: ~`(function () { return ';@{property}: @{value}rem'; }())`;
+}
+
+.property_(@property, @value) {
+    _: 0 ~"; @{property}:" @value;
+}
+
+.vendor(@property, @value) {
+    .property_('-webkit-@{property}', @value);
+    .property_( '-khtml-@{property}', @value);
+    .property_(   '-moz-@{property}', @value);
+    .property_(   '-o-@{property}', @value);
+    .property_(          @property,   @value);
+}
+
+.clip{
+    -webkit-background-clip: padding-box; 
+    -moz-background-clip: padding; 
+    -o-background-clip: padding; 
+    background-clip: padding-box; 
+}
+
+.block{
+    display: block;
+}
+
+.round(@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.box-sizing(@sizing: border-box){
+    -webkit-box-sizing: @sizing;
+    -moz-box-sizing: @sizing;
+    box-sizing: @sizing;
+}
+
+.scale(@scale: 1.5, @x: 0, @y: 0){
+    -webkit-transform: scale(@scale);
+    -webkit-transform-origin: @x @y;
+    -moz-transform: scale(@scale);
+    -moz-transform-origin: @x @y;
+    -o-transform: scale(@scale);
+    -o-transform-origin: @x @y;
+    -ms-transform: scale(@scale);
+    -ms-transform-origin: @x @y;
+    transform: scale(@scale);
+    transform-origin: @x @y;
+}
+
+.shadow(@depth: 0 2px 4px rgba(0,0,0,.3)){
+    -webkit-box-shadow: @depth;
+    -moz-box-shadow: @depth;
+    -o-box-shadow: @depth;
+    box-shadow: @depth;
+}
+
+.transform(@deg: rotate(9deg)){ 
+    -webkit-transform: @deg;
+    -moz-transform: @deg;
+    -ms-transform: @deg;
+    -o-transform: @deg;
+    transform: @deg;
+}
+
+.perspective(@val){
+    -webkit-perspective: @val;
+    -moz-perspective: @val;
+    -opera-perspective: @val;
+    -ms-perspective: @val;
+    perspective: @val;
+}
+
+.bgsize(@size: 100% 100%){
+    -webkit-background-size: @size; 
+    -moz-background-size: @size;
+    -o-background-size: @size;
+    background-size: @size;
+}
+
+.gradient(@start: #eee, @end: #777) {   
+    background: @start;
+    background-image: -moz-linear-gradient(top, @start, @end); 
+    background-image: -ms-linear-gradient(top, @start, @end); 
+    background-image: -o-linear-gradient(top, @start, @end);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(@start), to(@end));
+    background-image: -webkit-linear-gradient(top, @start, @end);
+    background-image: linear-gradient(top, @start, @end);
+}
+
+.gradient-circle(@h: center, @v: center, @shape: circle, @size: contain, @start: #ddd, @finish: #333, @stop: 100%) {
+    background-color: @start;
+    background-image: -moz-radial-gradient(@h @v, @shape @size, @start, @end @stop);
+    background-image: -webkit-radial-gradient(@h @v, @shape @size, @start, @end @stop);
+    background-image: -o-radial-gradient(@h @v, @shape @size, @start, @end @stop);
+    background-image: -ms-radial-gradient(@h @v, @shape @size, @start, @end @stop);
+    background-image: radial-gradient(@h @v, @shape @size, @start, @end @stop);
+}
+
+.button-maker(@color1: #fff, @color2: #333){
+    background: @color1;
+    border-top: 1px solid lighten(@color1, 10);
+    background: -moz-linear-gradient(top,  @color1 0%, @color1 50%, @color2 51%, @color2 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color1), color-stop(50%,@color1), color-stop(51%,@color2), color-stop(100%,@color2));
+    background: -webkit-linear-gradient(top,  @color1 0%,@color1 50%,@color2 51%,@color2 100%);
+    background: -o-linear-gradient(top,  @color1 0%,@color1 50%,@color2 51%,@color2 100%); 
+    background: -ms-linear-gradient(top,  @color1 0%,@color1 50%,@color2 51%,@color2 100%); 
+    background: linear-gradient(to bottom,  @color1 0%,@color1 50%,@color2 51%,@color2 100%);
+}
+
+.transition(@who: all, @length: .5s, @how: ease-out){
+    -webkit-transition: @who @length @how;
+    -moz-transition: @who @length @how;
+    -ms-transition: @who @length @how;
+    -o-transition: @who @length @how;
+    transition: @who @length @how;
+}
+
+.columns(@count: 2, @width: 200px, @gap: 20px){
+    -moz-column-count: @count;
+    -moz-column-gap: @gap;
+    -webkit-column-count: @count;
+    -webkit-column-gap: @gap;
+    column-count: @count;
+    column-gap: @gap;
+}
+
+.mask(@img: none){
+    -webkit-mask: url("../img/@{img}") top left / cover;
+    -o-mask: url("../img/@{img}") top left / cover;
+    -ms-mask: url("../img/@{img}") top left / cover;
+    mask: url("../img/@{img}") top left / cover;
+}
+
+.mask(@img: none, @method: top left / cover){
+    -webkit-mask: url("../img/@{img}") @method;
+    -o-mask: url("../img/@{img}") @method;
+    -ms-mask: url("../img/@{img}") @method;
+    mask: url("../img/@{img}") @method;
+}
+
+
+/* handy shortcuts */
+.true(@height: 20px){
+    height: @height;
+    line-height: @height;
+}
+
+.indent(@indent: -9999em){
+    text-indent: @indent;
+}
+
+.size(@width: 20px, @height:20px){
+    width: @width;
+    height: @height;
+}
+
+.bg(@img: none){
+    background: url("../img/@{img}") top center no-repeat;
+}
+
+.bg(@img: none, @method: top center no-repeat){
+    background: url("../img/@{img}") @method;
+}
+
+.clear{/* for use on :after */
+    content: " "; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden; 
+}
+
+.magic-box{
+    &:before{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        content:"";
+    }
+}
+.magic-box(@img: none){
+    &:before{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        content:"";
+        background: url("../img/@{img}") center no-repeat;
+    }
+}
+.magic-box(@img: none, @method: center no-repeat){
+    &:before{
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        content:"";
+        background: url("../img/@{img}") @method;
+    }
+}
+
+.bg(@img: none, @method: center no-repeat){
+    background: url("../img/@{img}") @method;
+}
+
+.container.vertical-align {
+    overflow: hidden;
+}
+
+.vertical-align(@position: relative) {
+    position: @position;
+    top: 50%;
+    // .vendor(transform,translateY(-50%));
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /*-webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);*/
+}
+
+.block{
+    display: block;
+}
+
+// base stuff 
+
+.inner{
+    position: relative;
+    margin: auto;
+    max-width: 1050px;
+}
+
+.has-button{
+    position: absolute;
+    bottom: 50px;
+    left:0;
+    right:0;
+}
+
+.translate(@x; @y) {
+  -webkit-transform: translate(@x, @y);
+      -ms-transform: translate(@x, @y); // IE9 only
+          transform: translate(@x, @y);
+}
+
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+          box-shadow: @shadow;
+}
+
+// Transitions
+.transition(@transition) {
+  -webkit-transition: @transition;
+          transition: @transition;
+}
+.transition-property(@transition-property) {
+  -webkit-transition-property: @transition-property;
+          transition-property: @transition-property;
+}
+.transition-delay(@transition-delay) {
+  -webkit-transition-delay: @transition-delay;
+          transition-delay: @transition-delay;
+}
+.transition-duration(@transition-duration) {
+  -webkit-transition-duration: @transition-duration;
+          transition-duration: @transition-duration;
+}
+.transition-transform(@transition) {
+  -webkit-transition: -webkit-transform @transition;
+     -moz-transition: -moz-transform @transition;
+       -o-transition: -o-transform @transition;
+          transition: transform @transition;
+}
+
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}

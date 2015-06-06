@@ -1,0 +1,210 @@
+body {
+
+}
+
+* {
+	box-sizing: border-box;
+}
+
+header {
+	position: relative;
+	margin: 100px auto;
+	height: 250px;
+
+	.logo_container {
+		height: 50%;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+		
+		#logo_defs {
+			display: none;
+		}
+		
+		.logo_link_container {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 600px;
+			height: 116px;
+			margin: 0 auto;
+			
+			.clef {
+				margin-left: 18.5%;
+				svg {
+					width: 53px;
+					height: 114px;
+					
+					.path {
+					  stroke-dasharray: 400;
+					  stroke-dashoffset: 400;
+					  animation: drawsymbol .75s linear forwards;
+					}
+				}
+			}
+			
+			.fermata {
+				position: absolute;
+				top: 0px;
+				left: 77%;
+				width: 0px;
+				animation: swish .25s ease forwards;
+				animation-delay: .75s;
+				overflow: hidden;
+				
+				svg {
+					width: 45px;
+					height: 30px;
+				}
+			}
+			
+			.logo_link {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 0%;
+				height: 100%;
+				opacity: 0;
+				animation: logofadein 0.5s ease forwards;
+				overflow: hidden;
+				
+				svg {
+					width: 600px;
+					height: 114px;
+				}
+			}
+		}
+	}
+	
+	.form_container {
+		position: relative;
+		margin-top: 20px;
+		opacity: 0;
+		overflow: hidden;
+		animation: inputsfadein 0.5s ease forwards;
+	
+		.input_container {			
+			input[type=text] {
+				width: 100%;
+				padding: 10px;
+				border-radius: 1px;
+				border: 1px solid #D8D8D8;
+				outline: 0;
+			}
+			
+			input[type=button] {
+				width: 100%;
+				padding: 10px 5px;
+				color: #FFF;
+				cursor: pointer;
+				background: #7000c8;
+				border: solid 1px #7000c8;
+				border-radius: 5px;
+			}
+		}
+	}
+	
+	&.top {
+		height: 75px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		
+		.logo_container {
+			height: 100%;
+			margin: 0;
+			
+			.logo_link_container {
+				left: 10px;
+				.clef {
+					margin-left: 12%;
+					
+					svg {
+						width: 37px;
+						height: 76px;
+						
+						.path {
+							stroke-dashoffset: 0;
+							fill-opacity: 1;
+							stroke-width: 2;
+							animation: none;
+						}
+					}
+				}
+				
+				.fermata {
+					left: 51.15%;
+					opacity: 1;
+					width: 32px;
+					animation: none;
+					
+					svg {
+						width: 32px;
+						height: 25px;
+					}
+				}
+				
+				.logo_link {
+					width: 100%;
+					opacity: 1;
+					animation: none;
+					svg {
+						width: 400px;
+						height: 76px;
+					}
+				}
+			}
+		}
+		
+		.form_container {
+			top: 0px;
+			opacity: 1;
+			animation: none;
+		}
+	}
+
+	@keyframes drawsymbol {
+	  75% {
+		stroke-dashoffset: 0;
+		fill-opacity: 0;
+		stroke-width: 2;
+	  }
+	  
+	  100% {
+		stroke-dashoffset: 0;
+		fill-opacity: 1;
+		stroke-width: 2;
+	  }
+	}
+
+	@keyframes swish {
+	  0% {
+		width: 0px;
+	  }
+	  
+	  100% {
+		width: 45px;
+	  }
+	}
+
+	@keyframes logofadein { 
+		from { 
+			opacity:1; 
+			width: 0%;
+		} 
+		to { 
+			opacity:1; 
+			width: 100%;
+		} 
+	}
+	
+	@keyframes inputsfadein { 
+		from { 
+			opacity: 0;
+		} 
+		to { 
+			opacity: 1;
+		} 
+	}
+}
