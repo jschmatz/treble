@@ -11,7 +11,7 @@ header {
 	margin: 100px auto;
 	height: 250px;
 	
-	@media @mq-mobile, @mq-mobile-large {
+	@media @mq-mobile, @mq-mobile-large, @mq-tablet {
 		margin: 0;
 	}
 
@@ -102,6 +102,10 @@ header {
 				border-radius: 1px;
 				border: 1px solid #D8D8D8;
 				outline: 0;
+			
+				@media @mq-mobile, @mq-mobile-large, @mq-tablet {
+					font-size: 1.5em;
+				}
 			}
 			
 			input[type=button] {
@@ -112,6 +116,11 @@ header {
 				background: #7000c8;
 				border: solid 1px #7000c8;
 				border-radius: 5px;
+				
+				@media @mq-mobile, @mq-mobile-large, @mq-tablet {
+					font-size: 1.5em;
+				}
+
 			}
 		}
 	}
