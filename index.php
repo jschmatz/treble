@@ -4,6 +4,7 @@
 <?php include 'includes/head.php'; ?>
 </head>
 <body class="home">
+	<?php include 'includes/header_home.php'; ?>
 	<section class="intro_container">
 		<div class="logo_container col-md-16">
 			<?php include 'includes/header_logo.php'; ?>

@@ -1,0 +1,152 @@
+.results {
+	.ads {
+		height: 100%;
+	}
+	
+	.search_results {
+		min-height: 200px;
+		border-left: solid 1px #DDD;
+		
+		.result_count {
+			padding-top: 10px;
+			margin-bottom: 20px;
+		}
+		
+		.narrow_toggle {
+			display: block;
+			margin-bottom: 10px;
+			
+			span {
+				padding-left: 5px;
+			}
+		}
+		
+		.radio_container {
+			margin-bottom: 10px;
+		}
+		
+		.narrow_fields {
+			display: none;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-bottom: 20px;
+			border: solid 1px #EEE;
+			background: #EEE;
+			border-radius: 10px;
+			
+			.option {
+				margin-bottom: 10px;
+				
+				input[type=text] {
+					height: 32px;
+				}
+				
+				.checkbox label {
+					font-weight: 700;
+				}
+				
+				#search_by_name {
+					width: 75%;
+				}
+			}
+			
+			.form-control {
+				width: auto;
+				display: inline;
+			}
+			
+			.bootstrap-tagsinput {
+				width: 50%;
+			}
+		}
+		
+		.sorts {
+			margin: 0;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			list-style: none;
+			text-align: right;
+			border-top: solid 1px #DDD;
+			border-bottom: solid 1px #DDD;
+			
+			li {
+				display: inline-block;
+				margin: 0 20px;
+				
+				&.title {
+					margin: 0;
+					font-weight: bold;
+				}
+				
+				a {
+					&.selected {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		
+		.pages {
+			margin: 0;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			list-style: none;
+			text-align: center;
+			
+			li {
+				display: inline-block;
+				margin: 0 10px;
+				
+				a {
+					&.selected {
+						font-weight: bold;
+					}
+					
+					.icon {
+						margin-top: 2px;
+					}
+				}
+			}
+		}
+		
+		.results {
+			margin-top: 20px;
+			list-style: none;
+			
+			.result {
+				height: 250px;
+				padding-top: 25px;
+				padding-bottom: 25px;
+				overflow: hidden;
+				
+				&.featured {
+					background: #f5e9ff;
+				}
+				
+				.pic_ratings {
+					img {
+						width: 100%;
+						max-width: 200px;
+						max-height: 200px;
+					}
+					
+					.rating {
+						margin-top: 5px;
+						text-align: center;
+						color: @purple;
+					}
+				}
+				
+				.info {
+					h3 {
+						margin: 0 0 5px 0;
+					}
+					
+					ul {
+						list-style: none;
+					}
+				}
+			}
+		}
+	}
+}

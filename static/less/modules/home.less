@@ -12,6 +12,14 @@
 	.logo_container {
 		height: 50%;
 		
+		@media @mq-mobile, @mq-mobile-large {
+			height: 75px;
+		}
+		
+		@media @mq-tablet {
+			height: 125px;
+		}
+		
 		.logo_link_container {
 			left: 0;
 			width: 600px;
@@ -59,10 +67,18 @@
 	.form_container {
 		height: 47%;
 		margin-top: 3%;
+		
+		
+		@media @mq-mobile, @mq-mobile-large, @mq-tablet {
+			height: auto;
+			margin-top: auto;
+		}
 	}
 	
 	@media @mq-mobile, @mq-mobile-large, @mq-tablet {
+		position: static;
 		width: 100%;
+		height: auto;
 	}
 	
 	@media @mq-mobile, @mq-mobile-large {

@@ -1,5 +1,17 @@
 body {
+	font-family: 'Noto Sans', sans-serif;
+}
 
+input, select {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+a {
+	color: @purple;
+	
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 * {
@@ -7,22 +19,40 @@ body {
 }
 
 header {
-	display: none;
-	position: relative;
-	height: 75px;
-	margin: 0 auto;
+	background: #EEE;
+	z-index: 1;
+	height: 50px;
 	
-	@media @mq-mobile, @mq-mobile-large, @mq-tablet {
-		margin: 0;
-	}
-
-	
+	.form_container {
+		margin-top: 9px;
 		
-	@media @mq-mobile, @mq-mobile-large {
-		height: 75px;
+		.input_container {
+			margin-bottom: 0;
+			
+			input[type=text] {
+				padding: 5px 10px;
+			}
+			
+			input[type=submit] {
+				padding: 5px;
+			}
+		}
 	}
 	
-	
+	ul {
+		float: right;
+		margin: 0;
+		
+		li {
+			display: inline-block;
+			
+			a {
+				display: block;
+				padding: 15px;
+				text-align: right;
+			}
+		}
+	}
 }
 
 .logo_container {
