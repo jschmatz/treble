@@ -120,6 +120,46 @@ header {
 	}
 }
 
+footer {
+	margin-top: 50px;
+	
+	.social_icons {
+		text-align: center;
+		
+		li {
+			display: inline-block;
+			margin: 0 10px;
+			
+			a {
+				font-size: 2.0em;
+			}
+		}
+	}
+	
+	.copyright, .bottom_links {
+		text-align: center;
+		
+		li {
+			display: inline-block;
+		}
+	}
+	
+	.bottom_links {
+		li {
+			a {
+				padding: 0 10px;
+				border-right: solid 1px @purple;
+			}
+			
+			&.last {
+				a {
+					border-right: none;
+				}
+			}
+		}
+	}
+}
+
 .form_container {
 	position: relative;
 	margin-top: 20px;
@@ -160,5 +200,27 @@ header {
 			}
 
 		}
+	}
+}
+
+.light_button {
+	padding: 5px 20px;
+	color: #7000c8;
+	background: #FFF;
+	border: solid 1px #7000c8;
+	border-radius: 20px;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.1s ease-in-out;
+	
+	@media @mq-mobile, @mq-mobile-large, @mq-tablet {
+		font-size: 1.5em;
+	}
+	
+	&:hover {
+		color: #FFF;
+		background: #7000c8;
 	}
 }
