@@ -18,4 +18,17 @@ $(document).ready(function() {
 		$('.musician_left').css({'position': 'absolute', 'top': '100px'}); 
 	  } 
 	});
+	
+	$("#rep_list_all_link").on("click", function() {
+		if($("#rep_list_all").hasClass("open")) {
+			$("#rep_list_all").slideUp();
+			$("#rep_list_all").removeClass("open");
+			$(this).html("Show Full List (+" + $(this).data("addsongs") + " More Songs");
+		}
+		else {
+			$("#rep_list_all").slideDown();
+			$("#rep_list_all").addClass("open");
+			$(this).html("Hide Full List");
+		}
+	});
 });

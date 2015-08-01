@@ -125,7 +125,7 @@
 		<ul class="results col-xs-16">
 			<li class="result featured col-xs-8">
 				<div class="pic_ratings col-xs-4">
-					<a href="#">
+					<a href="musician.php">
 						<img src="static/img/sample_profile_pic.jpg" />
 					</a>
 					<div class="rating">
@@ -137,19 +137,19 @@
 					</div>
 				</div>
 				<div class="info col-xs-12">
-					<h3><a href="#">Featured Profile 1 Name</a></h3>
+					<h3><a href="musician.php">Featured Profile 1 Name</a></h3>
 					<ul>
 						<li>Instrument(s): Guitar, Drums</li>
 						<li>Size of Group: 154</li>
 						<li>City: Anytown, USA</li>
 						<li>Hourly Rate: $1,000.00</li>
-						<li><a href="#">Audio Preview</a></li>
+						<li><a href="musician.php#audio_samples">Audio Preview</a></li>
 					</ul>
 				</div>
 			</li>
 			<li class="result featured col-xs-8">
 				<div class="pic_ratings col-xs-4">
-					<a href="#">
+					<a href="musician.php">
 						<img src="static/img/sample_profile_pic.jpg" />
 					</a>
 					<div class="rating">
@@ -161,19 +161,19 @@
 					</div>
 				</div>
 				<div class="info col-xs-12">
-					<h3><a href="#">Featured Profile 1 Name</a></h3>
+					<h3><a href="musician.php">Featured Profile 1 Name</a></h3>
 					<ul>
 						<li>Instrument(s): Guitar, Drums</li>
 						<li>Size of Group: 154</li>
 						<li>City: Anytown, USA</li>
 						<li>Hourly Rate: $1,000.00</li>
-						<li><a href="#">Audio Preview</a></li>
+						<li><a href="musician.php#audio_samples">Audio Preview</a></li>
 					</ul>
 				</div>
 			</li>
 			<li class="result col-xs-8">
 				<div class="pic_ratings col-xs-4">
-					<a href="#">
+					<a href="musician.php">
 						<img src="static/img/sample_profile_pic.jpg" />
 					</a>
 					<div class="rating">
@@ -185,19 +185,19 @@
 					</div>
 				</div>
 				<div class="info col-xs-12">
-					<h3><a href="#">Profile 1 Name</a></h3>
+					<h3><a href="musician.php">Profile 1 Name</a></h3>
 					<ul>
 						<li>Instrument(s): Guitar, Drums</li>
 						<li>Size of Group: 154</li>
 						<li>City: Anytown, USA</li>
 						<li>Hourly Rate: $1,000.00</li>
-						<li><a href="#">Audio Preview</a></li>
+						<li><a href="musician.php#audio_samples">Audio Preview</a></li>
 					</ul>
 				</div>
 			</li>
 			<li class="result col-xs-8">
 				<div class="pic_ratings col-xs-4">
-					<a href="#">
+					<a href="musician.php">
 						<img src="static/img/sample_profile_pic.jpg" />
 					</a>
 					<div class="rating">
@@ -209,19 +209,19 @@
 					</div>
 				</div>
 				<div class="info col-xs-12">
-					<h3><a href="#">Profile 1 Name</a></h3>
+					<h3><a href="musician.php">Profile 1 Name</a></h3>
 					<ul>
 						<li>Instrument(s): Guitar, Drums</li>
 						<li>Size of Group: 154</li>
 						<li>City: Anytown, USA</li>
 						<li>Hourly Rate: $1,000.00</li>
-						<li><a href="#">Audio Preview</a></li>
+						<li><a href="musician.php#audio_samples">Audio Preview</a></li>
 					</ul>
 				</div>
 			</li>
 			<li class="result col-xs-8">
 				<div class="pic_ratings col-xs-4">
-					<a href="#">
+					<a href="musician.php">
 						<img src="static/img/sample_profile_pic.jpg" />
 					</a>
 					<div class="rating">
@@ -233,19 +233,19 @@
 					</div>
 				</div>
 				<div class="info col-xs-12">
-					<h3><a href="#">Profile 1 Name</a></h3>
+					<h3><a href="musician.php">Profile 1 Name</a></h3>
 					<ul>
 						<li>Instrument(s): Guitar, Drums</li>
 						<li>Size of Group: 154</li>
 						<li>City: Anytown, USA</li>
 						<li>Hourly Rate: $1,000.00</li>
-						<li><a href="#">Audio Preview</a></li>
+						<li><a href="musician.php#audio_samples">Audio Preview</a></li>
 					</ul>
 				</div>
 			</li>
 			<li class="result col-xs-8">
 				<div class="pic_ratings col-xs-4">
-					<a href="#">
+					<a href="musician.php">
 						<img src="static/img/sample_profile_pic.jpg" />
 					</a>
 					<div class="rating">
@@ -257,13 +257,13 @@
 					</div>
 				</div>
 				<div class="info col-xs-12">
-					<h3><a href="#">Profile 1 Name</a></h3>
+					<h3><a href="musician.php">Profile 1 Name</a></h3>
 					<ul>
 						<li>Instrument(s): Guitar, Drums</li>
 						<li>Size of Group: 154</li>
 						<li>City: Anytown, USA</li>
 						<li>Hourly Rate: $1,000.00</li>
-						<li><a href="#">Audio Preview</a></li>
+						<li><a href="musician.php#audio_samples">Audio Preview</a></li>
 					</ul>
 				</div>
 			</li>

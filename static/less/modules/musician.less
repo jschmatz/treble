@@ -10,6 +10,14 @@
 		h1 {
 			margin-top: 25px;
 			padding-top: 0;
+			
+			.rating {
+				display: inline-block;
+				margin-left: 15px;
+				font-size: 0.5em;
+				text-align: left;
+				color: @purple;
+			}
 		}
 		
 		ul {
@@ -67,11 +75,92 @@
 			overflow: hidden;
 			z-index: 0;
 			
-			.rating {
-				margin-top: 20px;
-				font-size: 1.2em;
-				text-align: left;
-				color: @purple;
+			& > ul {
+				overflow: hidden;
+				
+				& > li {
+					padding: 20px 0;
+					overflow: hidden;
+					
+					
+					h5, .content {
+						display: inline-block;
+						vertical-align: top;
+					}
+					
+					h5 {
+						margin: 0;
+						font-weight: bold;
+					}
+					
+					.content {
+						table {
+							tr {
+								td {
+									padding: 5px;
+									background: #EEE;
+								}
+								
+								&.alt {
+									td {
+										background: none;
+									}
+								}
+							}
+						}
+						
+						ul {
+							li {
+								padding: 5px;
+								background: #EEE;
+								
+								&.alt {
+									background: none;
+								}
+							}
+						}
+					}
+					
+					&.alt {
+						background: #EEE;
+						
+						.content table tr td { 
+							background: #DDD;
+						}
+						
+						.content table tr.alt td { 
+							background: none;
+						}
+						
+						.content ul li {
+							background: #DDD;
+						}
+						
+						.content ul li.alt {
+							background: none;
+						}
+					}
+				}
+			}
+			
+			#rep_list_all {
+				display: none;
+			}
+			
+			#rep_list_all_link {
+				display: block;
+				width: 100%;
+				padding-top: 10px;
+				text-decoration: none;
+			}
+			
+			h4 {
+				font-weight: bold;
+			}
+			
+			.audio_sample {
+				padding: 25px 0;
+				text-align: center;
 			}
 		}
 	}
