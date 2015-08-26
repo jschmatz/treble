@@ -1,0 +1,63 @@
+.editprofile {
+	.profile_form {
+		clear: both;
+		
+		h1 {
+			padding: 10px;
+			margin: 0;
+		}
+		
+		h2 {
+			padding: 20px 0;
+			margin: 0;
+			border-top: solid 1px #DDD;
+			border-bottom: solid 1px #DDD;
+			background: #EEE;
+			text-align: center;
+		}
+        
+        h3 {
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+		
+		fieldset {
+			margin: 20px 0;
+			
+			label {
+				margin-top: 2px;
+				text-align: left;
+			}
+			input, select {
+			}
+		}
+        
+        #member_list {
+            .member_line {
+                &.alt {
+                    background: #EEE;
+                }
+                fieldset {
+                    margin: 10px 0;
+                }
+                
+                .remove_member {
+                    font-size: 1.5em;
+                    margin-top: 25px;
+                    color: @red;
+                }
+            }
+        }
+        
+        .genres_field .bootstrap-tagsinput {
+            width: 75%;
+        }
+        
+        #member_list_add {
+            margin: 20px 0;
+        }
+	}
+}
