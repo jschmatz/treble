@@ -23,7 +23,7 @@
                     <fieldset>
                         <label class="col-xs-16 row" for="email">Zip Code</label>
                         <input class="col-xs-3 form-control" type="text" name="email" value="" placeholder="Enter Zip" />
-                        <a class="col-xs-13" href="#">Select a specific location</a>
+                        <a class="col-xs-13 align-w-fields" href="#">Select a specific location</a>
                     </fieldset>
                 </div>
                 <div class="col-xs-8">
@@ -41,23 +41,56 @@
             <div class="col-xs-10 col-xs-offset-3">
                 <div class="col-xs-8">
                     <fieldset>
-                        <label class="col-xs-16 row" for="groupname">Group / Ensemble Name</label>
+                        <label class="col-xs-16 row" for="groupname">Group Name</label>
                         <input class="col-xs-12 form-control" type="text" name="groupname" value="" placeholder="Enter Group / Ensemble Name" />
                     </fieldset>
                 </div>
                 <div class="col-xs-8">
                     <fieldset>
                         <label class="col-xs-16 row" for="rate">Hourly Rate</label>
-                        <span class="col-xs-1">$</span>
+                        <span class="col-xs-1 align-w-fields">$</span>
                         <input class="col-xs-7 form-control" type="text" name="rate" value="" placeholder="Enter Hourly Rate" />
-                        <span class="col-xs-2"> / hr</span>
+                        <span class="col-xs-2 align-w-fields"> / hr</span>
                     </fieldset>
                 </div>
-                <div class="col-xs-8">
+                <div class="col-xs-16">
                     <fieldset class="genres_field">
-                        <label class="col-xs-16 row" for="genres">Musician / Group Genre(s) </label>
-                        <input class="col-xs-16 form-control" type="text" name="genres" value="" data-role="tagsinput" />
+                        <label class="col-xs-16 row" for="genres">Genre(s) </label>
+                        <input class="col-xs-16 form-control" id="genres" type="text" name="genres" value="" />
+                        <a class="col-xs-16" href="#genresModal" data-toggle="modal">or Select from a list</a>
                     </fieldset>
+                    <div id="genresModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Select your genres</h4>
+                                </div>
+                                <div id="genre_list" class="modal-body">
+                                    <script id="genre_tmpl" type="x-tmpl-mustache">
+                                        <h3 class="col-xs-16"><input type="checkbox" id="genrecat_{{ num }}" name="genrecat_{{ num }}" value="{{ cat_name }}" /><label for="genrecat_{{ num }}">{{ cat_name }}</label></h3>
+                                        <div class="col-xs-16">
+                                            <ul>
+                                                {{#subcats}}
+                                                    <li class="col-xs-4">
+                                                        <input class="col-xs-2" type="checkbox" id="genresubcat_{{ num }}_{{ subcat_num }}" name="genresubcat_{{ num }}_{{ subcat_num }}" value="{{ subcat_name }}" />
+                                                        <label class="col-xs-14" for="genresubcat_{{ num }}_{{ subcat_num }}">{{ subcat_name }}</label>
+                                                    </li>
+                                                {{/subcats}}
+                                            </ul>
+                                        </div>
+                                    </script>
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="save_genres" type="button" class="btn btn-default">Save</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
                 <h3 class="col-xs-16">Members</h3>
                 <div id="member_list" class="col-xs-16">
@@ -66,7 +99,7 @@
                             <div class="col-xs-7">
                                 <fieldset>
                                     <label class="col-xs-16 row" for="groupname">Instrument</label>
-                                    <input class="col-xs-12 form-control" type="text" name="instrument[{{num}}]" value="" placeholder="Enter Instrument" />
+                                    <input class="col-xs-12 form-control instrument" type="text" name="instrument[{{num}}]" value="" placeholder="Enter Instrument" />
                                 </fieldset>
                             </div>
                             <div class="col-xs-8">
@@ -94,7 +127,9 @@
 	</section>
 
 <?php include 'includes/footer.php'; ?>
-<script type="text/javascript" src="static/js/mustache.min.js"></script>
+<script type="text/javascript" src="static/js/plugins/mustache.min.js"></script>
+<script type="text/javascript" src="static/js/plugins/typeahead.js"></script>
+<script type="text/javascript" src="static/js/typeahead_setup.js"></script>
 <script type="text/javascript" src="static/js/editprofile.js"></script>
 </body>
 </html>

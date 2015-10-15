@@ -33,6 +33,10 @@
 			}
 			input, select {
 			}
+            
+            .align-w-fields {
+                margin-top: 7px;
+            }
 		}
         
         #member_list {
@@ -52,12 +56,81 @@
             }
         }
         
-        .genres_field .bootstrap-tagsinput {
-            width: 75%;
+        .genres_field .bootstrap-tagsinput, {
+            width: 100%;
+            
+            .twitter-typeahead {
+                vertical-align: top;
+            }
+        }
+        
+        .twitter-typeahead {
+            .tt-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 1000;
+                display: none;
+                float: left;
+                min-width: 610px;
+                padding: 5px 0;
+                margin: 2px 0 0;
+                list-style: none;
+                font-size: 14px;
+                background-color: #ffffff;
+                border: 1px solid #cccccc;
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                border-radius: 4px;
+                -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+                background-clip: padding-box;
+            }
+            .tt-suggestion {
+                float: left;
+                width: 200px;
+                display: block;
+                padding: 3px 20px;
+                font-weight: normal;
+                line-height: 1.428571429;
+                color: #333333;
+                white-space: nowrap;
+            }
+            .tt-suggestion:hover,
+            .tt-suggestion:focus,
+            .tt-suggestion.tt-cursor p {
+                color: #ffffff;
+                text-decoration: none;
+                outline: 0;
+                background-color: #428bca;
+            }
+        }
+        
+        #member_list .twitter-typeahead {
+            width: 100%;
         }
         
         #member_list_add {
             margin: 20px 0;
+        }
+        
+        #genre_list {
+            height: 70%;
+            overflow: auto;
+            
+            h3 {
+                label {
+                    margin-left: 10px;
+                }
+            }
+            ul {
+                overflow: hidden;
+                li {
+                    float: left;
+                    label {
+                        font-weight: 300;
+                    }
+                }
+            }
         }
 	}
 }
