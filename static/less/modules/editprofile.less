@@ -3,8 +3,9 @@
 		clear: both;
 		
 		h1 {
-			padding: 10px;
+			padding: 75px 10px 50px;
 			margin: 0;
+            text-align: center;
 		}
 		
 		h2 {
@@ -56,11 +57,16 @@
             }
         }
         
-        .genres_field .bootstrap-tagsinput, {
+        .genres_field .bootstrap-tagsinput,
+        .events_field .bootstrap-tagsinput {
             width: 100%;
             
             .twitter-typeahead {
                 vertical-align: top;
+            }
+            
+            .label-info {
+                background-color: #B25BDE;
             }
         }
         
@@ -130,6 +136,68 @@
                         font-weight: 300;
                     }
                 }
+            }
+        }
+        
+        #event_list {
+            height: 70%;
+            overflow: auto;
+            
+            li {
+                float: left;
+                label {
+                    font-weight: 300;
+                }
+            }
+        }
+        
+        .upload-container {
+            text-align: center;
+            
+            h3 {
+                text-align: left;
+            }
+            
+            p {
+                margin-top: 25px;
+            }
+            
+            .btn-success, .btn-primary, .btn-warning, .btn-danger {
+                background-image:-webkit-linear-gradient(top,#8600ef 0,#7000c8 100%);
+                background-image:-o-linear-gradient(top,#8600ef 0,#7000c8 100%);
+                background-image:-webkit-gradient(linear,left top,left bottom,from(#8600ef),to(#7000c8));
+                background-image:linear-gradient(to bottom,#8600ef 0,#7000c8 100%);
+                filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8600ef', endColorstr='#ff7000c8', GradientType=0);filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);
+                background-repeat:repeat-x;
+                border-color:#7000c8;
+                
+                &:hover {
+                    background: #7000c8;
+                    background-position: 0 0;
+                }
+            }
+        }
+        
+        #sc_list {
+            .sc_line {
+                margin-top: 15px;
+            }
+        }
+            
+        #sc_list_add {
+            margin-top: 15px;
+        }
+        
+        #form-end {
+            margin-top: 100px;
+            
+            input[type='checkbox'] + label {
+                margin-top: 10px;
+            }
+            
+            input[type='submit'], input[type='button'] {
+                background: #7000c8;
+                color: #FFFFFF;
             }
         }
 	}

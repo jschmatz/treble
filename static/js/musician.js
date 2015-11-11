@@ -2,10 +2,12 @@ $(document).ready(function() {
 	$(window).scroll(function(e){ 
 	  $el = $('.fixed_top'); 
 	  if ($(this).scrollTop() > 50 && $el.css('position') != 'fixed'){ 
+        $('.fixed_top').addClass("is_fixed");
 		$('.fixed_top').css({'position': 'fixed', 'top': '0px'}); 
 	  }
 	  if ($(this).scrollTop() < 50 && $el.css('position') == 'fixed')
 	  {
+        $('.fixed_top').removeClass("is_fixed");
 		$('.fixed_top').css({'position': 'absolute', 'top': '50px'}); 
 	  } 
 	  

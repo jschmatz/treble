@@ -3,8 +3,11 @@ var instrumentJsonPath = basepath + "/static/js/json/instruments.json";
 var genresJsonPath = basepath + "/static/js/json/genres.json";
 var flatGenreArray = [];
 
+var eventJsonPath = basepath + "/static/js/json/events.json";
+
 var instruments = null;
 var genres = null;
+var events = null;
 
 function setupInstrumentData(callback) {
     instruments = new Bloodhound({
@@ -49,6 +52,26 @@ function setupGenreData(callback) {
         genres.add(flatGenreArray);
         
         genres.initialize();
+        
+        callback();
+    });
+}
+
+function setupEventData(callback) {
+    events = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+    });
+    $.getJSON(eventJsonPath, function(json) {
+
+        var eventArray = [];
+        if(json) {
+            for(var i in json) {
+                eventArray.push({"name": json[i]});
+            }
+        }
+        events.add(eventArray);
+        events.initialize();
         
         callback();
     });
