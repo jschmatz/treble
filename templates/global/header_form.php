@@ -1,4 +1,4 @@
-<form action="results.php" method="GET">
+<form action="<?php echo __ROOT_DIR__; ?>/results" method="GET">
 	<fieldset>
 		<div class="input_container col-lg-13">
 			<input type="text" id="location" name="l" placeholder="Location" title="Location" />

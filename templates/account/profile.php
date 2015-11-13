@@ -299,13 +299,6 @@
                     </fieldset>
                 </div>
                 <div class="col-xs-16">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus nunc vel tempus molestie. Donec hendrerit nisl sem, eu pulvinar felis tincidunt porttitor. Vivamus vitae nunc a quam pulvinar venenatis. Quisque a ligula non tortor convallis tempus. Proin eget dapibus felis, non mattis ex. Etiam in varius nunc. Vestibulum vitae vestibulum neque. Duis scelerisque, ipsum a ullamcorper mollis, urna massa feugiat velit, quis scelerisque lacus metus sit amet arcu. Maecenas feugiat sollicitudin tellus, nec eleifend diam condimentum quis.</p>
-                </div>
-                <div class="col-xs-16">
-                    <fieldset>
-                        <input class="col-xs-1 form-control" type="checkbox" name="accept_conditions" />
-                        <label class="col-xs-15" for="accept_conditions">I accept the terms and conditions.</label>
-                    </fieldset>
                     <fieldset>
                         <input class="form-control col-xs-8 col-xs-offset-4" type="submit" value="Update Profile" />
                     </fieldset>
